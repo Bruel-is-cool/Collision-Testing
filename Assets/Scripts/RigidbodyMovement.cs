@@ -31,7 +31,7 @@ public class RigidbodyMovement : MonoBehaviour
 
         if (Input.GetButton("Fire3"))
         {
-            moveSpeed = 4f;
+            moveSpeed = 5.5f;
         }
 
         if (Input.GetButtonUp("Fire3"))
