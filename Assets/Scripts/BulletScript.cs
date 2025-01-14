@@ -12,7 +12,7 @@ public class BulletScript : MonoBehaviour
         {
             collision.GetComponent<Health>()?.TakeDamage(damage);
         }
-
+        Debug.Log("Collided with: " + collision.name);
         Destroy(gameObject);
     }
 }

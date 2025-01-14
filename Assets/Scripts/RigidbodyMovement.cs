@@ -16,6 +16,8 @@ public class RigidbodyMovement : MonoBehaviour
 
     void Update()
     {
+        
+
         float moveInputX = Input.GetAxisRaw("Horizontal"); // For horizontal movement (left/right)
         float moveInputY = Input.GetAxisRaw("Vertical");   // For vertical movement (up/down)
 
