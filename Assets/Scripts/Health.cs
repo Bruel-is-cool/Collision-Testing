@@ -7,6 +7,9 @@ public class Health : MonoBehaviour
     public int maxHealth;
     int currentHealth;
 
+    AudioSource audioSource;
+    public AudioClip DieSound;
+
     private void Start()
     {
         Debug.Log("<color=green><b>The</b> quick <b>brown</b> fox <b>jumps</b> over <b>the</b> lazy <b>dog.</b></color>");
@@ -30,10 +33,12 @@ public class Health : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
+         AudioSource.PlayClipAtPoint(DieSound, gameObject.transform.position);
         Destroy(gameObject);
         Debug.Log("Goodbye!");
+        
     }
 
     

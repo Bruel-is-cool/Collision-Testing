@@ -14,6 +14,16 @@ public class PlayerShooting : MonoBehaviour
 
   public float bulletSpeed = 20f;
 
+  AudioSource audioSource;
+  public AudioClip attackSound;
+
+
+  private void Start()
+  {
+    audioSource=GetComponent<AudioSource>();
+  }
+
+
 
     void Update()
   {
@@ -41,6 +51,8 @@ public class PlayerShooting : MonoBehaviour
 
     void Shoot()
     {
+        audioSource.PlayOneShot(attackSound);
+        
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint. position, firePointRotation.rotation);
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
@@ -48,6 +60,8 @@ public class PlayerShooting : MonoBehaviour
         rb.velocity = firePointRotation.right * bulletSpeed;
 
         Destroy(bullet, 10f);
+
+
     }
 
 
