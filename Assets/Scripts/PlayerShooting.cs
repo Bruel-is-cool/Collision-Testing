@@ -20,6 +20,7 @@ public class PlayerShooting : MonoBehaviour
 
   private void Start()
   {
+    Time.timeScale = 1f;
     audioSource=GetComponent<AudioSource>();
   }
 
