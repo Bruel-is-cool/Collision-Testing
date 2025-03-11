@@ -28,6 +28,12 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         Die();
     }
+
+    public void HealDamage(float healAmount)
+    {
+        currentHealth += healAmount;
+        HUD.UpdateHealthBar(currentHealth/maxHealth);
+    }
     
     public void Die()
     {
