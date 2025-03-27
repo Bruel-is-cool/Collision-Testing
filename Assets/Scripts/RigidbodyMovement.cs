@@ -1,6 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using Unity.UI;
-using Microsoft.Unity.VisualStudio.Editor;
+using UnityEngine.UI;
+
+
 
 [RequireComponent(typeof(Rigidbody2D))]         //Tell Unity to add theses components to the gameobject this code is attached to.
 [RequireComponent(typeof(BoxCollider2D))]       //We will still need to tweak some of the settings.
