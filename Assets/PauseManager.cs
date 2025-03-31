@@ -7,7 +7,6 @@ public class PauseManager : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public static bool isPaused = false;
-    // Start is called before the first frame update
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -23,7 +22,7 @@ public class PauseManager : MonoBehaviour
 
     public void ResumeGame()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
