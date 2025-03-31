@@ -13,10 +13,6 @@ public class RigidbodyMovement : MonoBehaviour
     Rigidbody2D rb2d;
     public float moveSpeed = 5f;
 
-    public Image StaminaBar;
-
-    public float Stamina, MaxStamina;
-
     void Start()
     {
         animator = GetComponent<Animator>();
